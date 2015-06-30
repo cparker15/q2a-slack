@@ -1,0 +1,10 @@
+{
+	"name": "q2a-slack",
+	"description": "Post question events to Slack",
+	"version": "1.0",
+	"date": "2015-06-30",
+	"author": "Leonard Challis",
+	"author_uri": "http://www.leonardchallis.com",
+	"license": "MIT",
+	"min_q2a": "1.5"
+}
