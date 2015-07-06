@@ -45,7 +45,7 @@ class qa_slack
                 $eventDescription = 'edited ' . ($params['oldcomment']['handle'] == $handle ? 'their own' : $params['oldcomment']['handle'] . "'s") . ' comment on ' . ($params['parent']['handle'] == $handle ? 'their own' : $params['parent']['handle'] . "'s") . " $type `" . $params['question']['title'] . "`\n<" . $this->siteUrl . $params['questionid'] . "|" . $this->linkMessage . ">";
                 break;
             case 'a_select':
-                $eventDescription = 'selected ' . ($params['answer']['handle'] == $handle ? 'their own' : $params['answer']['handle'] . "'s") . " answer for " . ($params['answer']['handle'] == $handle ? 'their own' : $params['answer']['handle'] . "'s") . " question `" . $params['parent']['title'] . "`\n<" . $this->siteUrl . $params['parent']['postid'] . "|" . $this->linkMessage . ">";
+                $eventDescription = 'selected ' . ($params['answer']['handle'] == $handle ? 'their own' : $params['answer']['handle'] . "'s") . " answer for " . ($params['parent']['handle'] == $handle ? 'their own' : $params['parent']['handle'] . "'s") . " question `" . $params['parent']['title'] . "`\n<" . $this->siteUrl . $params['parent']['postid'] . "|" . $this->linkMessage . ">";
                 break;
         }
 
