@@ -62,6 +62,9 @@ class qa_slack
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        /* un-comment out the line below to stop cURL checking if it trusts the address
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+         */
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Content-Length: ' . strlen($data_string)));
 
         $result = curl_exec($ch);
